@@ -6,7 +6,6 @@ it should work via
 
 `ansible-playbook pga_host.yml`
  
-##THIS IS INCORRECT, BUT WILL BE WHEN PUBLIC
 I don't have the file 'clouds.yaml' included, which is a necessity. 
 
 This is equivalent to the openrc.sh - may be included later as a vault.
