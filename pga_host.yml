@@ -30,7 +30,6 @@
   
   - name: build a blank node 
     os_server:
-      timeout: 200
       state: present
       name: test-vm-1
       cloud: tacc
