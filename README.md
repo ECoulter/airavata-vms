@@ -17,12 +17,12 @@ clouds:
  tacc:
   auth: 
    username: value
-   auth\_url: value
-   project\_name: value
+   auth_url: value
+   project_name: value
    password: value 
-  user\_domain\_name: value
-  project\_domain\_name: value
-  identity\_api\_version: 3
+  user_domain_name: value
+  project_domain_name: value
+  identity_api_version: 3
 ```
 
 Now with dynamic inventory (openstack.py).
