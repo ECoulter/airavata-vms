@@ -1,10 +1,14 @@
 # Jetstream Machine Ansible playbooks
 
 This is currently a simple set of playbooks to create a single virtual machine in Jetstream.
+You will probably have to install the shade libraries.
 
-it should work via
+It should work via
 
 `ansible-playbook pga_host.yml`
+
+This will both initialize a private network, with public router, 
+and create a new instance based on a 'm1.small' image.
  
 I don't have the file 'clouds.yaml' included in this public repo, which is a necessity. 
 
