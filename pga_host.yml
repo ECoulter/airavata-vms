@@ -2,20 +2,19 @@
 
 - hosts: localhost
 
-
   tasks:
 
   - name: create a private network
     os_network:
       cloud: tacc
       external: no
-      name: pga_private
+      name: private
 
   - name: create a subnet within private network
     os_subnet: 
       state: present
-      network_name: pga_private
-      name: pga_private_subnet
+      network_name: private
+      name: private_subnet
       cidr: 10.0.0.0/24
       cloud: tacc
   
@@ -26,9 +25,9 @@
       name: simple_router
       network: public
       interfaces:
-        - pga_private_subnet
+        - private_subnet
   
-  - name: build a blank node 
+  - name: build blank nodes 
     os_server:
       state: present
       name: test-vm-1
@@ -40,4 +39,4 @@
       meta:
         hostname: test-vm-1
       auto_ip: yes
-      network: pga_private
+      network: private
