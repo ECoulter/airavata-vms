@@ -1,5 +1,6 @@
 ---
 #Master playbook
+
 - hosts: zookeeper
   tags: zookeeper, airavata
   roles:
