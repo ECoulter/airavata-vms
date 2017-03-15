@@ -1,5 +1,25 @@
 # Jetstream Machine Ansible playbooks
 
+## Full airavata stack
+
+NOTE: These will currently fail in this repo as-cloned!
+
+TWO THINGS ARE MISSING:
+1. A working clouds.yaml file (see below in the single-server instance).
+2. A copy of *all* the roles from airvata/dev-tools/ansible/roles
+
+The playbook `all_build.yml` should build a complete stack of airavata servers.
+
+Currently, it depends on Jetstream (an OpenStack cloud service), both creating VMs and deploying software to them.
+
+Call it via: `ansible-playbook -i inventory all_build.yml`
+
+Testing is still needed to be sure that this creates a complete, working stack!
+
+The configuration is still off - creating a new user in the PGA, for example, sends a user request to testdrive.airavata.org...
+
+##Single Machine Example:
+
 This is currently a simple set of playbooks to create a single virtual machine in Jetstream.
 You will probably have to install the shade libraries.
 
