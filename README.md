@@ -4,6 +4,8 @@
 
 NOTE: These will currently fail in this repo as-cloned!
 
+NORE: ssh.cfg will point to the wrong ssh key!
+
 TWO THINGS ARE MISSING:
 1. A working clouds.yaml file (see below in the single-server instance).
 2. A copy of *all* the roles from airvata/dev-tools/ansible/roles
