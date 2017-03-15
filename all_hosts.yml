@@ -30,15 +30,15 @@
   - name: build blank nodes 
     os_server:
       state: present
-      name: {{ item.hostname }}
+      name: '{{ item.hostname }}'
       cloud: tacc
       image: 1790e5c8-315a-4b9b-8b1f-46e47330d3cc
       key_name: jetstream_key
       timeout: 200
       flavor: m1.small
       meta:
-        hostname: {{ item.hostname }}
-        group: {{ item.group }}
+        hostname: '{{ item.hostname }}'
+        group: '{{ item.group }}'
       auto_ip: yes
       network: private
     with_items: # maybe this should go in group_vars?
@@ -46,7 +46,7 @@
       - { hostname: 'zookeeper-test', group: 'zookeeper' }
       - { hostname: 'rabbitmq-test', group: 'rabbitmq' }
       - { hostname: 'database-test', group: 'database' }
-#      - { hostname: 'wso2is-test', group: 'wso2is' }
+      - { hostname: 'wso2is-test', group: 'wso2is' }
       - { hostname: 'gfac-test', group: 'gfac' }
       - { hostname: 'api-orch-test', group: 'api-orch' }
       - { hostname: 'registry-test', group: 'registry' }
